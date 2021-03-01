@@ -19,6 +19,9 @@ module.exports = {
           DEFAULT: '#363636',
           dark: '#242424',
         },
+      },
+      lineHeight: {
+        '12': '2.75rem',
       }
     },
   },
