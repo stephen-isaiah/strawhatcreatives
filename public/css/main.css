@@ -58,20 +58,20 @@ img {
 /* End global */
 
 /* Start Backgrounds */
-    .contain:before {
+    /* .contain:before {
         content:'';
         position: absolute;
         width: 80%;
         height: 80%;
         overflow: hidden;
         border-radius: 50%;
-        background: linear-gradient(-45deg, #d4deef, #74aec2);
+        background-image: linear-gradient(-45deg, #d4deef, #74aec2);
         top: -10%;
-        left:30%;
+        left: 48%;
         transform: translateY(-50%);
         transition: 1.8s ease-in;
         z-index: -1;
-    }
+    } */
 
 
     .svg1 {
@@ -697,7 +697,7 @@ hr {
     }
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (max-width: 750px) {
     .service {
         margin-top: 0;
     }
