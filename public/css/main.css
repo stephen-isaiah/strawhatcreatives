@@ -53,7 +53,7 @@ img {
         content:'';
         position: absolute;
         width: 40%;
-        height: 1250px;
+        height: 60%;
         overflow: hidden;
         border-radius: 50%;
         background: linear-gradient(-45deg, #d4deef, #74aec2);
