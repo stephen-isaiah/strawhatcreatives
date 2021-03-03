@@ -52,8 +52,8 @@ img {
     .contain:before {
         content:'';
         position: absolute;
-        width: 900px;
-        height: 900px;
+        width: 1250px;
+        height: 1250px;
         overflow: hidden;
         border-radius: 50%;
         background: linear-gradient(-45deg, #d4deef, #74aec2);
