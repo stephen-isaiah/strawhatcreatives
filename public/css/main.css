@@ -46,6 +46,10 @@ img {
     width: 100%;
 }
 
+.container {
+    overflow: hidden;
+}
+
 /* End global */
 
 /* Start Backgrounds */
