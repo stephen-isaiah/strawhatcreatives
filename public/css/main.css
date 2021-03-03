@@ -52,13 +52,13 @@ img {
     .contain:before {
         content:'';
         position: absolute;
-        width: 40%;
-        height: 60%;
+        width: 900px;
+        height: 900px;
         overflow: hidden;
         border-radius: 50%;
         background: linear-gradient(-45deg, #d4deef, #74aec2);
         top: -10%;
-        left:48%;
+        left:30%;
         transform: translateY(-50%);
         transition: 1.8s ease-in;
         z-index: -1;
