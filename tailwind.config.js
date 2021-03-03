@@ -1,5 +1,10 @@
 module.exports = {
-  purge: [],
+  purge:{
+    enabled: true,
+    content: [
+      './public/index.html',
+      ],
+  }, 
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
@@ -19,9 +24,6 @@ module.exports = {
           DEFAULT: '#363636',
           dark: '#242424',
         },
-      },
-      lineHeight: {
-        '12': '2.75rem',
       }
     },
   },
