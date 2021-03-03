@@ -54,6 +54,7 @@ img {
         position: absolute;
         width: 1250px;
         height: 1250px;
+        overflow-x: hidden;
         border-radius: 50%;
         background: linear-gradient(-45deg, #d4deef, #74aec2);
         top: -10%;
