@@ -5,6 +5,11 @@
     box-sizing: border-box;
 }
 
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 html {
     font-size: 10px;
     font-family: 'freight-sans-pro', sans-serif;
@@ -12,9 +17,9 @@ html {
 }
 
 body {
-    width: 100%;
+    /* width: 100%;
     height: 100%;
-    overflow-x: hidden;
+    overflow-x: hidden; */
 	background: linear-gradient(-45deg, rgb(219, 219, 219), #c7d4d8, #f5e1d5, #e2d9d2);
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
