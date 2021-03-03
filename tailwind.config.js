@@ -1,6 +1,7 @@
 module.exports = {
   purge:{
-    enabled: true,
+    enabled: true
+    ,
     content: [
       './public/index.html',
       ],
@@ -13,6 +14,9 @@ module.exports = {
           light: '#c6d0df',
           DEFAULT: '#a5c4d5',
           dark: '#8fbbce',
+        },
+        white: {
+          DEFAULT: '#fff',
         },
         straw: {
           light: '#ffeaca',
