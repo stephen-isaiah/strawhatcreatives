@@ -75,35 +75,51 @@ contactForm.addEventListener('submit', (e)=>{
   validateInputs();
   
   if (isFormValid){
+    // FOR XMLHttpRequest form
+    // let formData = { 
+    //   name: name.value,
+    //   email: email.value,
+    //   phone_number: phone.value,
+    //   service: service.value,
+    //   message: message.value
+    // }
 
-    let formData = { 
-      name: name.value,
-      email: email.value,
-      phone_number: phone.value,
-      service: service.value,
-      message: message.value
-    }
+    const formData = new FormData(contactForm);
+    fetch(contactForm.getAttribute('action'), {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/x-www-form-urlencoded;charset=UTF-8',
+        'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
+      },
+      body: new URLSearchParams(formData).toString()
+    })
+    .then(res => {
+      if (res) {
+        alert("Thank you for your submission!"),
+        remainingChars.textContent = `${MAX_CHARS} characters remaining`
+      }else{
+        alert('Something went wrong with the server please email stephen.dennis139@gmail.com andI will respond asap. Thank you!');
+      }
+    });
   
-    let xhr = new XMLHttpRequest();
-    xhr.open('POST', 'server.js');
-    xhr.setRequestHeader('content-type', 'application/json');
-    xhr.onload = function(){
-      console.log(xhr.responseText);
-      if(xhr.responseText == 'success'){
-        alert('Email Sent');
-        name.value = '';
-        email.value = '';
-        phone.value = '';
-        service.value = '';
-        message.value = '';
-        isValidationOn = false;
-       }else{
-         alert('Something went wrong with the server please email stephen.dennis139@gmail.com andI will respond asap. Thank you!');
-       }
+  //   let xhr = new XMLHttpRequest();
+  //   xhr.open('POST', '/#contact');
+  //   xhr.setRequestHeader('content-type', 'application/x-www-form-urlencoded;charset=UTF-8');
+  //   xhr.onload = function(){
+  //     console.log(xhr.responseText);
+  //     if(xhr.responseText == 'success'){
+  //       alert('Email Sent');
+  //       name.value = '';
+  //       email.value = '';
+  //       phone.value = '';
+  //       service.value = '';
+  //       message.value = '';
+  //       isValidationOn = false;
+  //      }
+  //   }
+  //   remainingChars.textContent = `${MAX_CHARS} characters remaining`
+  //   xhr.send(JSON.stringify(formData));
     }
-    remainingChars.textContent = `${MAX_CHARS} characters remaining`
-    xhr.send(JSON.stringify(formData));
-  }
   
 
 })
