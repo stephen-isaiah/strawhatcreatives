@@ -31,9 +31,6 @@ $(document).ready(function () {
 // Javascript
 var svg1 = document.getElementById('svg5794');
 var svgPath1 = svg1.getElementsByTagName('path');
-// var myGradient = document.getElementById('myGradient')
-// console.log(myGradient);
-// //function that takes the svg path, svg mouseover fill
 const honeyCombBG = (path, fill) => {
     for (var i  = 0; i < path.length; i++) {
         path[i].style['fill'] = 'rgba(255, 255, 255, 0)';
